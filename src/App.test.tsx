@@ -1,9 +1,16 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Shell Command label', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const labelElement = screen.getByText(/shell command/i);
+  expect(labelElement).toBeInTheDocument();
+});
+
+test('renders Create Task button', () => {
+  render(<App />);
+  const buttonElement = screen.getByText(/create task/i);
+  expect(buttonElement).toBeInTheDocument();
 });
