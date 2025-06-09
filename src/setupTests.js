@@ -12,3 +12,18 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+// Mock antd notification to prevent errors during tests
+jest.mock('antd', () => {
+  const antd = jest.requireActual('antd');
+  return {
+    ...antd,
+    notification: {
+      error: jest.fn(),
+      success: jest.fn(),
+      info: jest.fn(),
+      warning: jest.fn(),
+      open: jest.fn(),
+    },
+  };
+});
