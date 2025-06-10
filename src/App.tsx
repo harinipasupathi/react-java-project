@@ -32,7 +32,6 @@ const App: React.FC = () => {
     setLoading(true);
     try {
       const res = await axios.get('http://localhost:4000/tasks');
-      // 🧠 Fix: Map MongoDB _id to id
       const mappedTasks = res.data.map((task: any) => ({
         ...task,
         id: task._id,
