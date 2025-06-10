@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const { exec } = require('child_process'); // ✅ For running shell commands
+const { exec } = require('child_process'); 
 
 const app = express();
 const PORT = 4000;
@@ -14,9 +14,9 @@ mongoose.connect('mongodb://localhost:27017/taskmanager', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => console.log('✅ MongoDB connected'))
+  .then(() => console.log('MongoDB connected'))
   .catch(err => {
-    console.error('❌ MongoDB connection error:', err);
+    console.error('MongoDB connection error:', err);
     process.exit(1);
   });
 
