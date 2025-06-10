@@ -1,4 +1,4 @@
-# THIS IS TASK-3
+# This is the code for Task-3
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
